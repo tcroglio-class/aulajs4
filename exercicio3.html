@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício DOM 3</title>
+</head>
+<body>
+    <div id="quadrado" style="margin-left: 100px; width: 100px; height: 100px; background-color: red; cursor: pointer;">
+        <p style="text-align: center; padding-top: 10px;">você não vai me clicar!</p>
+    </div>
+
+    <script>
+
+        let quadrado = document.getElementById('quadrado')
+
+        quadrado.addEventListener('mouseover',  function() {
+            this.style.transform = "translateX(100px)"
+        })
+
+        quadrado.addEventListener('mouseleave', function() {
+            this.style.transform = "translateX(0)"
+        })
+        
+    </script>
+</body>
+</html>

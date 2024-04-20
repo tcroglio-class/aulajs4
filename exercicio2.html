@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exercício DOM 2</title>
+</head>
+
+<body>
+    <ul id="lista">
+        <li>Item 1</li>
+    </ul>
+    <button onclick="adicionarItem()">Adicionar Item</button>
+    <button onclick="removerItem()">Remover</button>
+
+    <script>
+        let contItem = 1;
+
+
+        function adicionarItem() {
+            contItem++;
+            let novoItem = document.createElement('li');
+            novoItem.textContent = `Item ${contItem}`;
+
+            novoItem.id = `item${contItem}`;
+            document.getElementById('lista').appendChild(novoItem);
+        }
+
+        function removerItem() {
+            let ultimoItem = document.getElementById(`item${contItem}`);
+
+            if (ultimoItem) {
+                ultimoItem.remove()
+            }
+
+            if (contItem > 1) {
+                contItem--;
+            }
+        } 
+    </script>
+</body>
+
+</html>

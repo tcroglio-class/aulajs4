@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício DOM</title>
+</head>
+
+<body>
+    <h1 id="mensagem">Olá, Mundo!</h1>
+    <button id="mudarTexto" onclick="mudarTexto()">Mudar Texto</button>
+
+    <script>
+
+        function mudarTexto() {
+            let texto = document.getElementById('mensagem');
+            texto.textContent = "Texto alterado!";
+            texto.style.color = "blue";
+        }
+
+    </script>
+</body>
+
+</html>
